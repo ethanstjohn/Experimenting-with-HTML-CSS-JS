@@ -1,0 +1,194 @@
+<html>
+<head>
+	<title>Ethan St John</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<div id="wrapper"> 
+		<div id="content"> 
+			<div class="intro">
+				<h1>2AM Artistry</h1>
+				<h3>Ashley Sowerby / Local Artist in the Iowa City - Cedar Rapids Area</h3>
+				<h3>Typography - Digital Art - Graphic Design - Commisions</h3>
+			</div>
+		</div> 
+	</div>
+</head>
+
+
+<body>
+	<nav>
+		<div id="wrapper"> 
+			<div id="content">
+				<h3>Navigation</h3>
+				<a href="https://www.facebook.com/">Facebook</a>
+				<a href="https://www.instagram.com">Instagram</a>
+				<a href="https://www.reddit.com/">Reddit</a>
+			</div>
+		</div>
+    </nav>
+	<br>
+
+	
+			<div id="ButtonContainer">
+				<h2>Picture Gallery</h2>
+				<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+				<button class="btn" onclick="filterSelection('plants')"> Plants</button>
+				<button class="btn" onclick="filterSelection('country')"> Countries</button>
+				<button class="btn" onclick="filterSelection('major')"> University of Iowa Majors</button>
+				<button class="btn" onclick="filterSelection('landfeature')"> Land Features</button>
+			</div>
+
+			<div class="SearchContainer">
+				<div class="filterDiv plants">
+						 <div class="responsiveimage">
+						  <img id="0" src="succulent.jpg" alt="Succulent">
+						</div>
+				</div>
+				<div class="filterDiv major">
+						 <div class="responsiveimage">
+						  <img id="1" src="Art.jpg" alt="Art">
+						</div>
+				</div>	
+				<div class="filterDiv plants">
+						 <div class="responsiveimage">
+						  <img id="2" src="Cactus.jpg" alt="Cactus">
+					</div>
+				</div>
+				<div class="filterDiv landfeature">
+						 <div class="responsiveimage">
+						  <img id="3" src="Mountain.jpg" alt="Mountain">
+						</div>
+				</div>
+				<div class="filterDiv plants">
+						 <div class="responsiveimage">
+						  <img id="4" src="Lily.jpg" alt="Lily">
+						</div>
+				</div>
+				<div class="filterDiv landfeature">
+						 <div class="responsiveimage">
+						  <img id="5" src="Volcano.webp" alt="Volcano">
+						</div>
+				</div>
+				<div class="filterDiv country">
+						 <div class="responsiveimage">
+						  <img id="6" src="United Kingdom.webp" alt="UK">
+						</div>
+				</div>
+				<div class="filterDiv country">
+						 <div class="responsiveimage">
+						  <img id="7" src="Germany.jpg" alt="Germany">
+						</div>
+				</div>
+				<div class="filterDiv major">
+						 <div class="responsiveimage">
+						  <img id="8" src="Philosophy.jpg" alt="Philosophy">
+						</div>
+				</div>
+				<div class="filterDiv major">
+						 <div class="responsiveimage">
+						  <img id="9" src="History.jpg" alt="History" >
+						</div>
+				</div>
+				<div class="filterDiv major">
+						 <div class="responsiveimage">
+						  <img id="10" src="Biology.jpg" alt="Biology">
+						</div>
+				</div>
+				<div class="filterDiv major">
+						 <div class="responsiveimage">
+						  <img id="11" src="Music.png" alt="Music">
+						</div>
+				</div>
+				<div class="filterDiv country">
+						 <div class="responsiveimage">
+						  <img id="12" src="Portugal.png" alt="Portugal">
+						</div>
+				</div>
+			</div>
+	
+	<form id="order_form" name="order_form" action="checkout-stage-3.html">
+		<textarea readonly id="orderShown" rows="4" cols="50"></textarea>
+		<br>
+		<div>
+			<p id="total" style="visibility:hidden">Total</p>
+			<button type="button" id="checkOutButton">Place Order</button>
+			<button type="button" id="clearButton">Clear Order</button>
+		</div>
+	</form>
+	
+	<header>
+		<div id="wrapper"> 
+			<div id="content">
+				<div id="summary">  
+					<h2>About Me</h2>
+					 <p>2AM Aristry is Ashley Sowerby's personal art brand. While her academic intrests largely
+					  involve psychology, her creative interests are captured in the form of typography, digital art,
+					  graphic design, and commisions that she enjoys persuing.</p>				
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	
+	<section class="feature">
+		<div id="wrapper"> 
+			<div id="content">
+				<h2>Featured Group Exhibitions</h2>
+				
+				<ul>
+				  <li>Brown County Historical Society</li>
+				  <li>Columbus Areas Art Council</li>
+				</ul>
+
+				<h2>Featured Solo Exhibitions</h2>
+				
+				<ul>
+				  <li>Tri-state Artisans</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	
+	<section class="item">
+		<div id="wrapper"> 
+			<div id="content">
+				<article>
+					<h2>responsiveimage</h2>
+					<p>This is just a glimpse of Ashley's artwork!</p>
+					<img src="ladispute.jpg" alt="Flower drawing of the band La Dispute" class="center"/>
+					<img src="totoroprint.png" alt="Print drawing of Ghibli's Totoro" class="center"/>
+					<img src="guitarcity.png" alt="Graphic art of logo, Guitar City & Sound" class="center"/>
+					<img src="redhotchillipepper.jpg" alt="Print drawing of the Red Hot Chilli Pepper's asterick logo" class="center"/>
+				</article>
+			</div>
+		</div>
+	</section>
+	
+	<br>
+
+	<div id="wrapper"> 
+		<div id="content">
+			<h2>Connect with me!</h2>
+			<a href="https://www.instagram.com">Click here for my Instagram Page</a>  
+			<h3>Sign up for my newsletter for updates on available art!</h3>
+			<br>
+			<form action="/action_page.php">
+				<label for="email">Enter email here:</label>
+				<input type="email" id="email" name="email">
+				<input type="submit">
+			</form>
+		</div>
+	</div>
+
+	<hr>
+
+	<script language="Javascript" type="text/javascript" src="myscripts.js"></script>
+</body>
+<footer>
+	<div id="wrapper"> 
+		<div id="content">
+			<p>Created by Ethan St John on 9.5.20</p>
+		</div>
+	</div>
+</footer>  
+</html>

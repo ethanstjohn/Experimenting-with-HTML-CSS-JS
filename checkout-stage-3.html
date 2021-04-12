@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1{
+	text-align: center;
+}
+</style>
+
+	<link rel="stylesheet" href="styles.css">
+	<title>Order Confirmation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<div id="wrapper"> 
+		<div id="content"> 
+			<div class="intro">
+				<h1>2AM Artistry</h1>
+				<h3>Ashley Sowerby / Local Artist in the Iowa City - Cedar Rapids Area</h3>
+				<h3>Typography - Digital Art - Graphic Design - Commisions</h3>
+			</div>
+		</div> 
+	</div>
+	
+</head>
+<body>
+
+	<br>
+	<div id="wrapper">
+		<div id="content">
+			<h1>Thank you for placing your order!<h1>
+			<a href="Project2Final.html">
+				<button style="align:center" class="btn active">Go Back</button>
+			</a>
+		</div>
+	</div>
+
+	<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+	
+  <script src="https://www.paypal.com/sdk/js?client-id=AWjuk8_NX9aQdyjwoF1D6tzQeTEP6OCdCd0eu5FRGr1NJkl3IhY040TiHXh9EVMaX417UxYueWCnPTtw&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+			purchase_units: [{"amount":{"currency_code":"USD","value":localStorage.getItem("totalPrice")}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+  <script>
+	alert("The total cost of your purchase is: $" + localStorage.getItem("totalPrice"));
+  </script>
+	
+</body>
+</html>
